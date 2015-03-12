@@ -30,6 +30,11 @@ ul {
 li {
   display: inline;
   padding: 20px;
+  max-width: 200px;
+}
+
+li .title:hover {
+  display: none;
 }
 
 .navbar {
@@ -40,4 +45,9 @@ li {
   border-radius: 50%;
   min-height: 160px;
   max-width: 160px;
+}
+
+.project-img:hover {
+  min-height: 180px;
+  max-width: 180px;
 }

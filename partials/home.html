@@ -5,11 +5,12 @@
   </div>
   <div class="row">
     <h3>Projects</h3>
+    <div class="row">
       <ul ng-controller="ProjectsCtrl">
         <li ng-repeat="project in projects">
-          <span ng-show="titleShowing"><h6>{{ project.title }}</h6></span>
-          <a href="{{ project.link }}"><img ng-mouseenter="displayTitle()" mouseleave="hideTitle()" class="project-img" src="{{ project.image }}"></a>
+          <a href="{{ project.link }}"><img class="project-img" src="{{ project.image }}"></a>
         </li>
       </ul>
+    </div>
   </div>
 </div>
