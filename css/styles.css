@@ -1,0 +1,43 @@
+body {
+  background-color: #FFFDF6;
+}
+
+h1 {
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+h3 {
+  font-family: 'Merriweather', serif;
+  font-weight: normal;
+  font-size: 40px;
+  text-align: center;
+}
+
+p {
+  font-family: 'Merriweather', serif;
+  font-weight: normal;
+  font-size: 13px;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding-top: 1em;
+}
+
+li {
+  display: inline;
+  padding: 20px;
+}
+
+.navbar {
+  background-color: #FFFDF6;
+}
+
+.project-img {
+  border-radius: 50%;
+  min-height: 160px;
+  max-width: 160px;
+}

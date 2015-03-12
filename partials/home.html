@@ -1,0 +1,15 @@
+<div class="container-fluid col-xs-12 col-md-8">
+  <div class="row">
+    <h3 ng-controller="GreetingCtrl" ng-init="selectGreeting()">{{ greeting }}!</h3>
+    <p class="lead">This is a portfolio of some projects I have designed or contributed to.</p>
+  </div>
+  <div class="row">
+    <h3>Projects</h3>
+      <ul ng-controller="ProjectsCtrl">
+        <li ng-repeat="project in projects">
+          <span ng-show="titleShowing"><h6>{{ project.title }}</h6></span>
+          <a href="{{ project.link }}"><img ng-mouseenter="displayTitle()" mouseleave="hideTitle()" class="project-img" src="{{ project.image }}"></a>
+        </li>
+      </ul>
+  </div>
+</div>

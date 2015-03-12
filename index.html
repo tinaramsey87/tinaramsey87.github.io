@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="portfolio">
+  <head>
+    <meta charset="UTF-8">
+    <title>Tina Ramsey's Portfolio</title>
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-ui-router.js"></script>
+    <script src="app.js"></script>
+    <script src="services/GreetingsFactory.js"></script>
+    <script src="services/ProjectsFactory.js"></script>
+    <script src="controllers/GreetingController.js"></script>
+    <script src="controllers/ProjectsController.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300italic,300,700' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+    <div class="page-header">
+      <h1>Tina Ramsey <small>web developer</small></h1>
+    </div>
+    <nav class="navbar navbar-default" id="navigation">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <li ng-click="active='projects'" ng-class="{ active: active ==='projects' } "><a href="#">Projects<span class="sr-only">(current)</span></a></li>
+          <li ng-click="active='about'" ng-class="{ active: active ==='about' }"><a href="#">About</a></li>
+          <li ng-click="active='contact'" ng-class="{ active: active ==='contact' }"><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <div class="container-fluid">
+      <div ui-view></div>
+    </div>
+  </body>
+</html>
