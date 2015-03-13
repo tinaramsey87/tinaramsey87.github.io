@@ -53,7 +53,7 @@ p {
 }
 
 .navbar-right i {
-  font-size: 26px;
+  font-size: 32px;
 }
 
 ul {
@@ -83,9 +83,16 @@ li .title:hover {
 }
 
 .quote {
-  margin-left: 100px;
+  max-width: 550px;
 }
 
 #text-list {
   margin-left: 100px;
+}
+
+.panel {
+  margin-left: 300px;
+  max-width: 600px;
+  max-height: 150px;
+  background-color: #FFFCF6;
 }
