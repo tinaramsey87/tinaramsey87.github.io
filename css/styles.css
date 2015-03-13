@@ -2,6 +2,10 @@ body {
   background-color: #FFFDF6;
 }
 
+.main {
+  margin-top: 90px;
+}
+
 h1 {
   font-family: 'Merriweather', serif;
   font-weight: bold;
@@ -15,11 +19,34 @@ h3 {
   text-align: center;
 }
 
+h4 {
+  font-size: 24px;
+}
+
 p {
   font-family: 'Merriweather', serif;
   font-weight: normal;
   font-size: 13px;
   text-align: center;
+  text-justify: inter-word;
+}
+
+.navbar {
+  opacity: 0.90;
+  max-height: 80px;
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  text: #FFFDF6;
+}
+
+.navbar li {
+  padding-top: 5px;
+}
+
+.navbar-text {
+  font-family: 'Merriweather', serif;
+  font-weight: italic;
+  font-size: 20px;
 }
 
 ul {
@@ -37,10 +64,6 @@ li .title:hover {
   display: none;
 }
 
-.navbar {
-  background-color: #FFFDF6;
-}
-
 .project-img {
   border-radius: 50%;
   min-height: 160px;
@@ -50,4 +73,12 @@ li .title:hover {
 .project-img:hover {
   min-height: 180px;
   max-width: 180px;
+}
+
+.quote {
+  margin-left: 100px;
+}
+
+#text-list {
+  margin-left: 100px;
 }

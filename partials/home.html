@@ -1,16 +1,50 @@
-<div class="container-fluid col-xs-12 col-md-8">
+<div class="row">
+  <h3 ng-controller="GreetingCtrl" ng-init="selectGreeting()">{{ greeting }}!</h3>
+  <p class="lead">This is my website and a portfolio of some projects I have designed or contributed to.</p>
+</div>
+
+<div class="row">
+  <h3>About Me</h3>
+  <hr>
+  <p class="lead">Web development and design has been a passion of mine for over ten years, and I am just beginning to explore my options for a career in the field. I have worked in veterinary medicine for the past eight years and am passionate about people, health, positivity and creating applications that solve real-world problems. For fun, I enjoy playing games - both video games and board games - and am especially interested in the story telling aspect of game development.</p>
+  <blockquote class="quote">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+  </blockquote>
+</div>
+<div class="row">
+  <ul id="text-list"><h4>Languages</h4>
+    <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Ruby on Rails</li>
+    <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Javascript</li>
+    <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> AngularJS</li>
+    <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> EmberJS</li>
+  </ul>
+</div>
+<div class="row">
+  <ul id="text-list"><h4>Skills</h4>
+    <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Ruby on Rails</li>
+    <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Javascript</li>
+    <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> AngularJS</li>
+    <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> EmberJS</li>
+  </ul>
+</div>
+<div class="row">
+  <ul id="text-list"><h4>Interests</h4>
+    <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Ruby on Rails</li>
+    <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Javascript</li>
+    <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> AngularJS</li>
+    <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> EmberJS</li>
+  </ul>
+</div>
+
+<div class="row">
+  <h3>Projects</h3>
+  <hr>
   <div class="row">
-    <h3 ng-controller="GreetingCtrl" ng-init="selectGreeting()">{{ greeting }}!</h3>
-    <p class="lead">This is a portfolio of some projects I have designed or contributed to.</p>
-  </div>
-  <div class="row">
-    <h3>Projects</h3>
-    <div class="row">
-      <ul ng-controller="ProjectsCtrl">
-        <li ng-repeat="project in projects">
-          <a href="{{ project.link }}"><img class="project-img" src="{{ project.image }}"></a>
-        </li>
-      </ul>
-    </div>
+    <ul ng-controller="ProjectsCtrl">
+      <li ng-repeat="project in projects">
+        <a href="{{ project.link }}"><img class="project-img" src="{{ project.image }}"></a>
+      </li>
+    </ul>
   </div>
 </div>

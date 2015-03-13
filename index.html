@@ -16,21 +16,19 @@
   </head>
 
   <body>
-    <div class="page-header">
-      <h1>Tina Ramsey <small>web developer</small></h1>
-    </div>
-    <nav class="navbar navbar-default" id="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="navigation">
       <div class="container-fluid">
         <ul class="nav navbar-nav">
-          <li ng-click="active='projects'" ng-class="{ active: active ==='projects' } "><a href="#">Projects<span class="sr-only">(current)</span></a></li>
-          <li ng-click="active='about'" ng-class="{ active: active ==='about' }"><a href="#">About</a></li>
+          <p class="navbar-text navbar-left">Tina Ramsey</p>
+          <li ng-click="active='about'" ng-class="{ active: active ==='about' } "><a href="#">About<span class="sr-only">(current)</span></a></li>
+          <li ng-click="active='projects'" ng-class="{ active: active ==='projects' }"><a href="#">Projects</a></li>
           <li ng-click="active='contact'" ng-class="{ active: active ==='contact' }"><a href="#">Contact</a></li>
         </ul>
       </div>
     </nav>
 
 
-    <div class="container-fluid">
+    <div class="container-fluid main col-md-10 col-md-offset-1">
       <div ui-view></div>
     </div>
   </body>
