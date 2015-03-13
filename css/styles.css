@@ -41,12 +41,19 @@ p {
 
 .navbar li {
   padding-top: 5px;
+  padding-left: 3px;
+  padding-right: 3px;
+
 }
 
 .navbar-text {
   font-family: 'Merriweather', serif;
   font-weight: italic;
   font-size: 20px;
+}
+
+.navbar-right i {
+  font-size: 26px;
 }
 
 ul {
