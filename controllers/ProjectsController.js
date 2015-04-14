@@ -1,10 +1,26 @@
-portfolio.controller('ProjectsCtrl', function ProjectsCtrl($scope, ProjectsFactory, $stateParams, UtilitiesFactory) {
+  // $scope.callModal = function(project) {
+  //   project = $scope.project
+  //   $('#myModal').modal();
+  // }
+
+portfolio.controller('ProjectsCtrl', function ProjectsCtrl($scope, $modal, ProjectsFactory, $stateParams, UtilitiesFactory) {
+
   $scope.projects = ProjectsFactory.projects;
   $scope.ProjectsFactory = ProjectsFactory;
-  $scope.project = UtilitiesFactory.findById(ProjectsFactory.projects, $stateParams.projectId)
+  // $scope.project = UtilitiesFactory.findById(ProjectsFactory.projects, $stateParams.projectId)
 
-  $scope.callModal = function(project) {
-    project = $scope.project
-    $('#myModal').modal();
-  }
+  $scope.open = function(project) {
+
+    var modalInstance = $modal.open({
+      templateUrl: 'modalContent.html',
+      controller: 'ModalInstanceCtrl',
+      project: project,
+      resolve: {
+        project: function () {
+          return project;
+        }
+      }
+    });
+
+  };
 });

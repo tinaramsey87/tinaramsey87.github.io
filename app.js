@@ -1,4 +1,4 @@
-var portfolio = angular.module('portfolio', ['ui.router']);
+var portfolio = angular.module('portfolio', ['ui.router', 'ui.bootstrap']);
 
 portfolio.config(function($stateProvider) {
   $stateProvider.state('home', {

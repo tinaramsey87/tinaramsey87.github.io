@@ -48,27 +48,23 @@
   <h3>Projects</h3>
   <hr>
   <div class="row">
-    <ul ng-controller="ProjectsCtrl">
-      <li ng-repeat="project in projects">
-        <img ng-click="callModal()" class="project-img" src="{{ project.image }}">
-        <div id="myModal" class="modal fade">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">{{ project.title }}</h4>
-              </div>
-              <div class="modal-body">
-                <p>{{ project.title }}</p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div><!-- /.modal-content -->
-          </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
-      </li>
-    </ul>
+    <div ng-controller="ProjectsCtrl">
+    <script type="text/ng-template" id="modalContent.html">
+      <div class="modal-header">
+          <h3 class="modal-title">{{ project.title }}</h3>
+      </div>
+      <div class="modal-body">
+          <a href="{{ project.link}}">Visit Project Page</a>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-warning" ng-click="cancel()">Close</button>
+      </div>
+    </script>
+      <ul>
+        <li ng-repeat="project in projects">
+          <img ng-click="open(project)" class="project-img" src="{{ project.image }}">
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
