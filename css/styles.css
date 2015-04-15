@@ -6,6 +6,18 @@ body {
   margin-top: 90px;
 }
 
+.row {
+  margin-bottom: 80px;
+}
+
+.about{
+  margin-bottom: 0px;
+}
+
+.list-row-last {
+  margin-bottom: 80px;
+}
+
 h1 {
   font-family: 'Merriweather', serif;
   font-weight: bold;
@@ -31,6 +43,10 @@ p {
   text-justify: inter-word;
 }
 
+.tag {
+  text-align: center;
+}
+
 .navbar {
   opacity: 0.90;
   max-height: 80px;
@@ -46,10 +62,12 @@ p {
 
 }
 
-.navbar-text {
+.navbar-text a {
   font-family: 'Merriweather', serif;
   font-weight: italic;
   font-size: 20px;
+  color: #FFFDF6;
+  text-decoration: none;
 }
 
 .navbar-right i {
@@ -71,15 +89,31 @@ li .title:hover {
   display: none;
 }
 
+.projects-list {
+  margin-left: 60px;
+}
+
 .project-img {
   border-radius: 50%;
   min-height: 160px;
+  max-height: 160px;
+  min-width: 160px;
   max-width: 160px;
 }
 
 .project-img:hover {
   min-height: 180px;
+  max-height: 180px;
+  min-width: 180px;
   max-width: 180px;
+}
+
+.modal-header {
+  text-align: center;
+}
+
+.modal-body {
+  text-align: center;
 }
 
 .quote {

@@ -1,5 +1,5 @@
 <div class="row">
-  <h3 ng-controller="GreetingCtrl" ng-init="selectGreeting()">{{ greeting }}!</h3>
+  <h3 id="top" ng-controller="GreetingCtrl" ng-init="selectGreeting()">{{ greeting }}!</h3>
   <p class="lead">This is my website and a portfolio of some projects I have designed or contributed to.</p>
   <div class="panel panel-default">
     <div class="panel-body">
@@ -11,12 +11,12 @@
   </div>
 </div>
 
-<div class="row">
+<div class="row about" id="about">
   <h3>About Me</h3>
   <hr>
   <p class="lead">Web development and design has been a passion of mine for over ten years, and I am just beginning to explore my options for a career in the field. I have worked in veterinary medicine for the past eight years and am passionate about people, health, positivity and creating applications that solve real-world problems.</p>
 </div>
-<div class="row">
+<div class="list-row">
   <ul id="text-list"><h4>Languages</h4>
     <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Ruby on Rails</li>
     <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Javascript</li>
@@ -25,7 +25,7 @@
     <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> HTML/CSS</li>
   </ul>
 </div>
-<div class="row">
+<div class="list-row">
   <ul id="text-list"><h4>Skills</h4>
     <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Pair Programming</li>
     <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Communication</li>
@@ -34,7 +34,7 @@
     <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Problem Solving</li>
   </ul>
 </div>
-<div class="row">
+<div class="list-row-last">
   <ul id="text-list"><h4>Interests</h4>
     <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> User Experience</li>
     <li><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Team Building</li>
@@ -44,17 +44,20 @@
   </ul>
 </div>
 
-<div class="row">
+<div class="row" id="projects">
   <h3>Projects</h3>
+  <h5 class="tag">Click each image to learn more.</h5>
   <hr>
   <div class="row">
-    <div ng-controller="ProjectsCtrl">
+    <div class="projects-list" ng-controller="ProjectsCtrl">
     <script type="text/ng-template" id="modalContent.html">
       <div class="modal-header">
           <h3 class="modal-title">{{ project.title }}</h3>
+          <h5>Written in: {{ project.tech }}</h5>
       </div>
       <div class="modal-body">
-          <a href="{{ project.link}}">Visit Project Page</a>
+          <p>{{ project.info }}</p>
+          <h6><a href="{{ project.link }}">Visit Project Page</a></h6>
       </div>
       <div class="modal-footer">
         <button class="btn btn-warning" ng-click="cancel()">Close</button>
@@ -67,4 +70,11 @@
       </ul>
     </div>
   </div>
+</div>
+
+<div class="row" id="contact">
+  <h3>Contact Me</h3>
+  <hr>
+  <p class="lead">Email: tina.ramsey87@gmail.com</p>
+  <p class="lead">Message me on <a href="https://www.linkedin.com/in/theramz" target="_blank">LinkedIn</a></p>
 </div>

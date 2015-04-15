@@ -13,6 +13,7 @@
     <script src="services/QuotesFactory.js"></script>
     <script src="services/UtilitiesFactory.js"></script>
 
+    <script src="controllers/HomeController.js"></script>
     <script src="controllers/GreetingController.js"></script>
     <script src="controllers/ProjectsController.js"></script>
     <script src="controllers/QuotesController.js"></script>
@@ -25,13 +26,13 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" id="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="navigation" ng-controller="HomeCtrl">
       <div class="container-fluid">
         <ul class="nav navbar-nav">
-          <p class="navbar-text navbar-left">Tina Ramsey</p>
-          <li ng-click="active='about'" ng-class="{ active: active ==='about' } "><a href="#">About<span class="sr-only">(current)</span></a></li>
-          <li ng-click="active='projects'" ng-class="{ active: active ==='projects' }"><a href="#">Projects</a></li>
-          <li ng-click="active='contact'" ng-class="{ active: active ==='contact' }"><a href="#">Contact</a></li>
+          <p class="navbar-text navbar-left"><a ng-click="scrollTo('top')">Tina Ramsey</a></p>
+          <li ng-click="active='about'" ng-class="{ active: active === 'about' }"><a ng-click="scrollTo('about')">About<span class="sr-only">(current)</span></a></li>
+          <li ng-click="active='projects'" ng-class="{ active: active ==='projects' }"><a ng-click="scrollTo('projects')">Projects</a></li>
+          <li ng-click="active='contact'" ng-class="{ active: active ==='contact' }"><a ng-click="scrollTo('contact')">Contact</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="http://www.github.com/tinaramsey87"><i class="fa fa-github-alt"></i></a></li>
@@ -44,7 +45,7 @@
 
 
     <div class="container-fluid main col-md-10 col-md-offset-1">
-      <div ui-view></div>
+      <div ui-view ng-controller="HomeCtrl"></div>
     </div>
   </body>
 </html>
