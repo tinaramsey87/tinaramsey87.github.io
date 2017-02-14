@@ -1,5 +1,10 @@
 body {
   background-color: #FFFDF6;
+    padding-top: 80px;
+}
+
+.jumbotron {
+    opacity: 0.90%;
 }
 
 .main {
@@ -35,11 +40,15 @@ h4 {
   font-size: 24px;
 }
 
+.greetings {
+    text-align: center;
+}
+
 p {
   font-family: 'Merriweather', serif;
   font-weight: normal;
   font-size: 13px;
-  text-align: center;
+  text-align: left;
   text-justify: inter-word;
 }
 
@@ -59,7 +68,7 @@ p {
   padding-top: 5px;
   padding-left: 3px;
   padding-right: 3px;
-
+  cursor: pointer;
 }
 
 .navbar-text a {
@@ -114,10 +123,6 @@ li .title:hover {
 
 .modal-body {
   text-align: center;
-}
-
-.quote {
-  max-width: 550px;
 }
 
 #text-list {

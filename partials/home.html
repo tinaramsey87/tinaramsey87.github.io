@@ -1,19 +1,22 @@
-<div class="row">
-  <h3 id="top" ng-controller="GreetingCtrl" ng-init="selectGreeting()">{{ greeting }}!</h3>
-  <p class="lead">This is my website and a portfolio of some projects I have designed or contributed to.</p>
-</div>
 
-<div class="row about" id="about">
-  <h3>About Me</h3>
-  <hr>
+  <div class="well">
+    <h3 id="top" ng-controller="GreetingCtrl" ng-init="selectGreeting()">{{ greeting }}!</h3>
+    <p class="lead greetings">This is my website and a portfolio of some projects I have designed or contributed to.</p>
+  </div>
+
+<div class="row about" id="About">
+  <div class="page-header">
+    <h1>About Me</h1>
+  </div> 
   <p class="lead">Web development and design has been a passion of mine for over ten years, and two years ago I decided to turn that passion into a career. I graduated from Epicodus, a fulltime code school in Portland, Oregon, and have been working at a small company as a frontend JavaScript developer since then. Although I mostly write vanilla JS, I have recently started working with frameworks again including Mithril, React and Angular.</p>
 </div>
 
-<div class="row" id="projects">
-  <h3>Projects</h3>
+<div class="row" id="Projects">
+  <div class="page-header">
+    <h1>Projects</h1>
+  </div>
   <h5 class="tag">Click each image to learn more.</h5>
-  <hr>
-  <div class="row">
+<!--  <div class="row">-->
     <div class="projects-list" ng-controller="ProjectsCtrl">
     <script type="text/ng-template" id="modalContent.html">
       <div class="modal-header">
@@ -34,12 +37,14 @@
         </li>
       </ul>
     </div>
-  </div>
+<!--  </div>-->
 </div>
 
-<div class="row" id="contact">
-  <h3>Contact Me</h3>
-  <hr>
-  <p class="lead">Email: tina.ramsey87@gmail.com</p>
-  <p class="lead">Message me on <a href="https://www.linkedin.com/in/theramz" target="_blank">LinkedIn</a></p>
+<div class="row" id="Contact">
+  <div class="page-header">
+    <h1>Contact</h1>
+  </div>
+
+    <p class="lead"><span class="glyphicon glyphicon-envelope"></span> Email: tina.ramsey87@gmail.com</p>
+    <p class="lead"><span class="glyphicon glyphicon-pencil"></span> Message me on <a href="https://www.linkedin.com/in/theramz" target="_blank">LinkedIn</a></p>
 </div>

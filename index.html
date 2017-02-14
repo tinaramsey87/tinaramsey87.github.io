@@ -3,22 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Tina Ramsey's Portfolio</title>
-    <script src="lib/angular.js"></script>
-    <script src="lib/angular-ui-router.js"></script>
-    <script src="lib/ui-bootstrap-0.12.1.min.js"></script>
-    <script src="app.js"></script>
-
-    <script src="services/GreetingsFactory.js"></script>
-    <script src="services/ProjectsFactory.js"></script>
-    <script src="services/QuotesFactory.js"></script>
-    <script src="services/UtilitiesFactory.js"></script>
-
-    <script src="controllers/HomeController.js"></script>
-    <script src="controllers/GreetingController.js"></script>
-    <script src="controllers/ProjectsController.js"></script>
-    <script src="controllers/QuotesController.js"></script>
-    <script src="controllers/ModalInstanceController.js"></script>
-
+  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300italic,300,700' rel='stylesheet' type='text/css'>
@@ -28,11 +13,16 @@
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top" id="navigation" ng-controller="HomeCtrl">
       <div class="container-fluid">
-        <ul class="nav navbar-nav">
-          <p class="navbar-text navbar-left"><a ng-click="scrollTo('top')">Tina Ramsey</a></p>
-          <li ng-click="active='about'" ng-class="{ active: active === 'about' }"><a ng-click="scrollTo('about')">About<span class="sr-only">(current)</span></a></li>
+        <ul class="nav navbar-nav" ng-repeat="item in menuItems">
+            
+            
+            
+            
+          <li ng-click="setActive(item)" ng-class="{ active: activeMenu === item }"><a ng-click="scrollTo(item)">{{ item }}<span class="sr-only">(current)</span></a></li>
+<!--
           <li ng-click="active='projects'" ng-class="{ active: active ==='projects' }"><a ng-click="scrollTo('projects')">Projects</a></li>
           <li ng-click="active='contact'" ng-class="{ active: active ==='contact' }"><a ng-click="scrollTo('contact')">Contact</a></li>
+-->
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="http://www.github.com/tinaramsey87"><i class="fa fa-github-alt"></i></a></li>
@@ -41,10 +31,29 @@
 
       </div>
     </nav>
-
+    <div class="jumbotron">
+      <div class="container headerText">
+          <h1>Tina Ramsey   <small><u>javascript developer</u></small></h1>
+      </div>
+    </div>
 
     <div class="container-fluid main col-md-10 col-md-offset-1">
       <div ui-view ng-controller="HomeCtrl"></div>
     </div>
+      
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-ui-router.js"></script>
+    <script src="lib/ui-bootstrap-0.12.1.min.js"></script>
+    <script src="app.js"></script>
+
+    <script src="services/GreetingsFactory.js"></script>
+    <script src="services/ProjectsFactory.js"></script>
+    <script src="services/UtilitiesFactory.js"></script>
+
+    <script src="controllers/HomeController.js"></script>
+    <script src="controllers/GreetingController.js"></script>
+    <script src="controllers/ProjectsController.js"></script>
+    <script src="controllers/ModalInstanceController.js"></script>
+
   </body>
 </html>
